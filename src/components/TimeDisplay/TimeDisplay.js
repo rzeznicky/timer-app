@@ -1,7 +1,6 @@
 import styles from './TimeDisplay.module.scss';
 
 const Timer = props => {
-    
     const msToTime = (timeInMs) => {
         let msecs = Math.floor(timeInMs);
         msecs = msecs % 1000;
@@ -16,7 +15,7 @@ const Timer = props => {
 
     return (
         <div>
-            <span>{msToTime(props.time)}</span>
+            <span className={styles.display}>{msToTime(props.time)}</span>
         </div>
     )
 };
